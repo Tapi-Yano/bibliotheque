@@ -1,0 +1,14 @@
+<div id="listesL">
+    <?php foreach($listes_Livres as $listes): ?>
+    <section>
+        <figure>
+            <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="img/<?= $listes['isbn'] ?>.jpg" alt="photo du livre"></a>
+        </figure>
+        <div class="detailsL">
+            <h2><?= htmlspecialchars($listes['titre']) ?></h2>
+                <p>Publiée en <?= htmlspecialchars($listes['annee']) ?></p>
+                <p>Édité par <?= htmlspecialchars($listes['libelle']) ?></p>
+        </div>
+    </section>
+    <?php endforeach; ?>
+</div>

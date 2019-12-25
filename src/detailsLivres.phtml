@@ -1,0 +1,20 @@
+<div id="detailsLivres">
+    <section>
+        <figure>
+            <!-- ici je prend la valeur qui est présente dans ma table detailsLivres a la position zero-->
+            <img src="img/<?= $detailsLivres[0]['isbn'] ?>.jpg" alt="photo du livre">
+        </figure>
+        <div class="detailsL">
+            <h2><?= htmlspecialchars($detailsLivres[0]['titre']) ?></h2>
+                <p>Publiée en <?= htmlspecialchars($detailsLivres[0]['annee']) ?></p>
+                <p>Édité par : <q><?= htmlspecialchars($detailsLivres[0]['nomEditeur']) ?></q></p>
+            <!-- ici je boucle dans le tableau pour afficher le nom et le role des differentes personnes qui ont travailler sur le livre-->
+                <?php foreach($detailsLivres as $details): ?>
+                    <p>Rôle de <?= htmlspecialchars($details['nom']) ?> <?= htmlspecialchars($details['prenom']) ?> : <?= htmlspecialchars($details['role']) ?></p>
+                <?php endforeach; ?>
+                <p>Disponible en : <?= htmlspecialchars($detailsLivres[0]['langue']) ?></p>
+                <p>Nombres de pages : <?= htmlspecialchars($detailsLivres[0]['nbpages']) ?></p>
+        </div>
+    </section>
+</div>
+

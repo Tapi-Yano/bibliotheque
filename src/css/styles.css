@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+ul, li{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    background-color: #EAEAEA;
+	font-size: 1.5rem;
+	width: 100%;
+	margin: 0;
+}
+
+
+/*************************************************************************/
+/***********************version mobile************************************/
+/*************************************************************************/
+
+header, footer{
+    text-align: center;
+}
+
+header h1{
+    font-family: 'Pacifico', cursive;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+}
+
+nav li{
+    display: inline;
+    background-color: black;
+    padding: 1rem;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+nav li a{
+    color: blanchedalmond;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: 200px;
+}
+
+#listesL, #detailsLivres{
+    text-align: center;
+}
+
+#listesL section, #detailsLivres section{
+    background-color: #ffffff;
+    opacity: 0.8;
+    width: 95%;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+
+/*************************************************************************/
+/***********************version tablette**********************************/
+/*************************************************************************/
+
+@media screen and (min-width:600px){
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #listesL section, #detailsLivres section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        width: 70%;
+    }
+
+    #listesL .detailsL, #detailsLivres .detailsL{
+        margin: 1rem;
+    }
+}
+
+/*************************************************************************/
+/***********************version desktop***********************************/
+/*************************************************************************/
+
+@media screen and (min-width:1024px){
+    header h1{
+        font-size: 3em;
+    }
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    footer nav ul{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    nav li{
+        margin: 1rem 1rem;
+        
+    }
+
+    #listesL section, #detailsLivres section{
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+    }
+}
