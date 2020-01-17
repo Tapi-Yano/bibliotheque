@@ -67,6 +67,53 @@ img{
     padding: 1rem;
 }
 
+#nouveauL{
+    background-color: #fff;
+    opacity: 0.9;
+    padding: 1em;
+    margin: 0.5em;
+}
+
+h2{
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+}
+
+#nouveauL li{
+    list-style-type: none;
+    padding: 0.5em;
+}
+
+#nouveauL input, #nouveauL select{
+    border: 1px solid black;
+    border-style: inset;
+    border-radius: 5px;
+}
+
+.boutton{
+    text-align: center;
+}
+
+body > main >  #nouveauL > form > fieldset > ul > li.boutton > button.buttonSubmit{
+    background-color: green;
+    color: #EAEAEA;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
+    text-decoration: none;
+    background-color: red;
+    color: #EAEAEA;
+    border-radius: 10px;
+    padding: 0.6em;
+}
+
+.flexHeader img{
+    max-width: 100px;
+    height: auto;
+}
+
 
 /*************************************************************************/
 /***********************version tablette**********************************/
@@ -83,12 +130,28 @@ img{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         margin-bottom: 1rem;
         width: 70%;
     }
 
     #listesL .detailsL, #detailsLivres .detailsL{
         margin: 1rem;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+
+    #nouveauL{
+        width: 70%;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+
+    .flexHeader img{
+        max-width: 200px;
+        height: auto;
     }
 }
 
@@ -98,7 +161,7 @@ img{
 
 @media screen and (min-width:1024px){
     header h1{
-        font-size: 3em;
+        font-size: 4em;
     }
     nav ul{
         display: flex;
@@ -119,5 +182,27 @@ img{
         display: flex;
         justify-content: space-around;
         width: 90%;
+    }
+
+    h2{
+        font-size: 3em;
+    }
+
+    #nouveauL{
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+
+    .flexHeader{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .flexHeader img{
+        max-width: 100%;
+        height: auto;
     }
 }

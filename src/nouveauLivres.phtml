@@ -1,0 +1,55 @@
+<h2>Ajoutez un nouveau livre</h2>
+<div id="nouveauL">
+    <form action="nouveauLivres.php" method="POST">
+        <fieldset>
+            <legend>Nouveau Livre</legend>
+            <ul>
+                <li>
+                    <label for="isbn">isbn :</label>
+                    <input type="text" id="isbn" name="isbn">
+                </li>
+                <li>
+                    <label for="titre">Titre :</label>
+                    <input type="text" id="titre" name="titre">
+                </li>
+                <li>
+                    <label for="editeur">Editeur :</label>
+                    <select name="editeur" id="editeur" for="editeur">
+                    <?php foreach($resultEditeur as $editeurs): ?>
+                        <option value="<?= Htmlspecialchars($editeurs['id']) ?>"><?= Htmlspecialchars($editeurs['libelle']) ?></option>
+                    <?php endforeach ?>
+                    </select>
+                </li>
+                <li>
+                    <label for="annee">Année :</label>
+                    <input type="number" id="annee" name="annee">
+                </li>
+
+                <li>
+                    <label for="genre">Genre :</label>
+                    <select name="genre" id="genre" for="genre">
+                    <?php foreach($resultGenre as $genres): ?>
+                        <option value="<?= Htmlspecialchars($genres['id']) ?>"><?= Htmlspecialchars($genres['libelle']) ?></option>
+                    <?php endforeach ?>
+                    </select>
+                </li>                   
+                <li>
+                    <label for="langue">Langue :</label>
+                    <select name="langue" id="langue" for="langue">
+                    <?php foreach($resultLangue as $langues): ?>
+                        <option value="<?= Htmlspecialchars($langues['id']) ?>"><?= Htmlspecialchars($langues['libelle']) ?></option>
+                    <?php endforeach ?>
+                    </select>
+                </li>
+                <li>
+                    <label for="nbpages">Nombre de pages :</label>
+                    <input type="text" id="nbpages" name="nbpages">
+                </li>
+                <li class="boutton">
+                    <button class="buttonSubmit" type="submit">Enregistrer</button>
+                    <a class="buttonEffacer" href="listesLivres.php">Annuler</a>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</div>

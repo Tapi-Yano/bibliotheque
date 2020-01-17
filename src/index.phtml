@@ -11,17 +11,19 @@
 <body>
     <header>
         <h1>Bibliotheque de livre</h1>
-    <figure>
-        <img src="" alt="logo">
-    </figure>
-    <nav>
-        <ul>
-            <li><a href="listesLivres.php">Tous les Livres</a></li>
-            <li><a href="#">Par auteur</a></li>
-            <li><a href="#">Par année</a></li>
-            <li><a href="#">Nouveau livre</a></li>
-        </ul>
-    </nav>
+        <div class="flexHeader">
+            <figure>
+                <img src="img/logo-bibliothèque.png" alt="logo">
+            </figure>
+            <nav>
+                <ul>
+                    <li><a href="listesLivres.php">Tous les Livres</a></li>
+                    <li><a href="#">Par auteur</a></li>
+                    <li><a href="#">Par année</a></li>
+                    <li><a href="nouveauLivres.php">Nouveau livre</a></li>
+                </ul>
+            </nav>
+    </div>
     </header>
         <main>
             <?php include $template.'.phtml'; ?>
@@ -32,7 +34,7 @@
                 <li><a href="listesLivres.php">Tous les Livres</a></li>
                 <li><a href="#">Par auteur</a></li>
                 <li><a href="#">Par année</a></li>
-                <li><a href="#">Nouveau livre</a></li>
+                <li><a href="nouveauLivres.php">Nouveau livre</a></li>
             </ul>
         </nav>
     </footer>
