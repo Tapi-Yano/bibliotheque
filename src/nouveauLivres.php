@@ -23,7 +23,7 @@ if(empty($_POST)){
     $resultLangue = $query2->fetchALL();   
 
     $template='nouveauLivres';
-    include 'index.phtml';
+    include 'layout.phtml';
 }else{
 
 

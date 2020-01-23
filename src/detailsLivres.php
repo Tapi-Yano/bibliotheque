@@ -22,4 +22,4 @@ $detailsLivres = $query->fetchAll();
 // var_dump($detailsLivres);
 
 $template = 'detailsLivres';
-include 'index.phtml';
+include 'layout.phtml';

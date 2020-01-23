@@ -26,8 +26,11 @@ body{
 header, footer{
     text-align: center;
 }
-
-header h1{
+header a{
+    color: black;
+    text-decoration: none;
+}
+header a h1{
     font-family: 'Pacifico', cursive;
 }
 
@@ -67,7 +70,7 @@ img{
     padding: 1rem;
 }
 
-#nouveauL{
+#nouveauL, #acceuil{
     background-color: #fff;
     opacity: 0.9;
     padding: 1em;
@@ -143,7 +146,7 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
         font-size: 2em;
     }
 
-    #nouveauL{
+    #nouveauL, #acceuil{
         width: 70%;
         margin: auto;
         margin-bottom: 1em;
@@ -160,7 +163,7 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
 /*************************************************************************/
 
 @media screen and (min-width:1024px){
-    header h1{
+    header a h1{
         font-size: 4em;
     }
     nav ul{
@@ -188,7 +191,7 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
         font-size: 3em;
     }
 
-    #nouveauL{
+    #nouveauL, #acceuil{
         text-align: center;
         width: 60%;
         margin: auto;

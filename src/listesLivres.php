@@ -16,4 +16,4 @@ $listes_Livres = $resultat->fetchAll();
 
 
 $template = 'listesLivres';
-include 'index.phtml';
+include 'layout.phtml';
