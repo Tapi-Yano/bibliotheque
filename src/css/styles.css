@@ -45,6 +45,7 @@ nav li{
     width: 150px;
     margin: auto;
     margin-bottom: 1rem;
+    list-style-type: none;
 }
 
 nav li a{
