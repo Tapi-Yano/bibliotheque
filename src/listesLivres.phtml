@@ -2,7 +2,12 @@
     <?php foreach($listes_Livres as $listes): ?>
     <section>
         <figure>
+        <?php if(empty($listes['isbn'])){
+                $listes['isbn'] = 0 ?>
+             <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="img/<?= $listes['isbn'] ?>.jpg" alt="photo du livre"></a>
+        <?php }else{ ?>
             <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="img/<?= $listes['isbn'] ?>.jpg" alt="photo du livre"></a>
+        <?php } ?>   
         </figure>
         <div class="detailsL">
             <h2><?= htmlspecialchars($listes['titre']) ?></h2>
