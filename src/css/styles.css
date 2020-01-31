@@ -40,7 +40,6 @@ nav ul{
 }
 
 nav li{
-    display: inline;
     background-color: black;
     padding: 1rem;
     width: 150px;
