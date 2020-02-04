@@ -16,7 +16,6 @@ $query=$pdo->prepare('
 $query->execute(array($_POST['auteur']));
 $auteurLivres = $query->fetchAll();
 
-print_r($auteurLivres);
 
 $template = 'auteurLivres';
 include 'layout.phtml';

@@ -1,12 +1,33 @@
-<h2>Auteur livre</h2>
+<div id="livreAuteur">
+    <h2>Liste des livres par auteur</h2>
+    <form action="auteurLivres.php" method="POST">
+        <fieldset class="barreDeRecherche">
+            <p>
+                <label for="auteur">Recherchez votre Auteur</label>
+                <input type="text" name="auteur" id="auteur" placeholder="Entrez votre recherche">
+                <button type="submit" value="Recherche">Recherche</button>
+            </p>
+        </fieldset>
+    </form>
+    <div id="listesL">
+        <?php foreach($auteurLivres as $listes): ?>
+        <section>
+            <figure>
+            <?php if(empty($listes['isbn'])){
+                    $listes['isbn'] = 0 ?>
+                <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="img/<?= $listes['isbn'] ?>.jpg" alt="photo du livre"></a>
+            <?php }else{ ?>
+                <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="img/<?= $listes['isbn'] ?>.jpg" alt="photo du livre"></a>
+            <?php } ?>   
+            </figure>
+            <div class="detailsL">
+                <h2><?= htmlspecialchars($listes['titre']) ?></h2>
+                    <p>Publiée en <?= htmlspecialchars($listes['annee']) ?></p>
+                    <p>Édité par <?= htmlspecialchars($listes['libelle']) ?></p>
+            </div>
+        </section>
+        <?php endforeach; ?>
+    </div>
 
-<form action="auteurLivres.php" method="POST">
-    <fieldset>
-        <legend>Recherche</legend>
-        <p>
-            <label for="auteur">Recherche Votre Auteur</label>
-            <input type="text" name="auteur" id="auteur">
-            <input type="submit" value="Rechercher">
-        </p>
-    </fieldset>
-</form>
+
+</div>

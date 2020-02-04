@@ -128,6 +128,25 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
     flex-direction: column;
     align-items: center;
 }
+#livreAuteur > form > fieldset{
+    background-color: #283E52;
+    color: antiquewhite;
+    padding: 1em;
+    text-align: right;
+}
+#livreAuteur > form > fieldset p{
+    display: inline-block;
+}
+#livreAuteur > form > fieldset input{
+    height: 40px;
+}
+#livreAuteur > form > fieldset p button{
+    color: black;
+    padding: 1em;
+    height: 40px;
+    background-color: #E26B01;
+}
+
 
 
 /*************************************************************************/
