@@ -129,8 +129,8 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
     align-items: center;
 }
 #livreAuteur > form > fieldset{
-    background-color: #283E52;
-    color: antiquewhite;
+    background-color: black;
+    color: blanchedalmond;
     padding: 1em;
     text-align: right;
 }
@@ -195,6 +195,10 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
         padding: 2rem;
         font-size: 1em;
         align-items: center;
+    }
+
+    #livreAuteur > form > fieldset input{
+        width: 200px;
     }
 }
 
@@ -261,5 +265,9 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
         align-items: center;
         padding: 1rem;
         font-size: 1em;
+    }
+
+    #livreAuteur > form > fieldset input{
+        width: 300px;
     }
 }
