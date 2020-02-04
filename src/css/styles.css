@@ -212,11 +212,17 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
         font-size: 3em;
     }
 
-    #nouveauL, #acceuil{
+    #nouveauL{
         text-align: center;
         width: 60%;
         margin: auto;
         margin-bottom: 1em;
+    }
+
+    #acceuil{
+        text-align: center;
+        width: 90%;
+        margin: auto;
     }
 
     .flexHeader{
