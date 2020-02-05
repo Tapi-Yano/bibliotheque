@@ -137,8 +137,14 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
 #livreAuteur > form > fieldset p{
     display: inline-block;
 }
+
+#livreAuteur > form > fieldset p label{
+    display: none;
+}
+
 #livreAuteur > form > fieldset input{
     height: 40px;
+    width: 100px;
 }
 #livreAuteur > form > fieldset p button{
     color: black;
@@ -200,6 +206,12 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
     #livreAuteur > form > fieldset input{
         width: 200px;
     }
+
+    #livreAuteur > form > fieldset p label{
+        display: inline;
+    }
+
+   
 }
 
 /*************************************************************************/
