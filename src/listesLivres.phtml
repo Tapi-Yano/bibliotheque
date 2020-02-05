@@ -1,12 +1,13 @@
 <div id="listesL">
-    <?php foreach($listes_Livres as $listes): ?>
+    <?php foreach($listes_Livres as $listes): 
+            $image = "img/". $listes['isbn'] .".jpg";
+            $imageDefaut = "img/0.jpg";?>
     <section>
         <figure>
-        <?php if(empty($listes['isbn'])){
-                $listes['isbn'] = 0 ?>
-             <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="img/<?= $listes['isbn'] ?>.jpg" alt="photo du livre"></a>
+        <?php if(file_exists($image)){ ?>
+            <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="<?= $image ?>" alt="photo du livre"></a> 
         <?php }else{ ?>
-            <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="img/<?= $listes['isbn'] ?>.jpg" alt="photo du livre"></a>
+            <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="<?= $imageDefaut ?>" alt="photo du livre"></a>
         <?php } ?>   
         </figure>
         <div class="detailsL">

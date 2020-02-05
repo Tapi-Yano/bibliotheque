@@ -31,13 +31,7 @@ if(empty($_POST)){
         INSERT INTO Livre (isbn , titre, editeur, annee, genre, langue, nbpages)
         VALUES (?, ?, ?, ?, ?, ?, ?)
     ');
-
-    if(empty($_POST['isbn'])){
-        $_POST['isbn'] = 0;
-        $query3->execute(array($_POST['isbn'], $_POST['titre'], $_POST['editeur'], $_POST['annee'], $_POST['genre'], $_POST['langue'], $_POST['nbpages']));
-    }else{
-        $query3->execute(array($_POST['isbn'], $_POST['titre'], $_POST['editeur'], $_POST['annee'], $_POST['genre'], $_POST['langue'], $_POST['nbpages']));
-    }
+    $query3->execute(array($_POST['isbn'], $_POST['titre'], $_POST['editeur'], $_POST['annee'], $_POST['genre'], $_POST['langue'], $_POST['nbpages']));
    
     header('Location: listesLivres.php');
 
