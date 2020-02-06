@@ -1,0 +1,28 @@
+<div id="livreAnnee">
+    <h2>Liste des livres par année</h2>
+    <form action="anneeLivres.php" method="POST">
+        <fieldset class="barreDeRecherche">
+            <p>
+                <label for="annee">Recherchez votre livre par Année</label>
+                <input type="number" name="annee" id="annee" placeholder="Entrez votre recherche">
+                <button type="submit">Recherche</button>
+            </p>
+        </fieldset>
+    </form>
+    <div id="listesL">
+        <?php foreach($anneeLivres as $listes): ?>
+        <section>
+            <figure>
+                <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="img/<?= $listes['isbn'] ?>.jpg" alt="photo du livre"></a>  
+            </figure>
+            <div class="detailsL">
+                <h2><?= htmlspecialchars($listes['titre']) ?></h2>
+                    <p>Publiée en <?= htmlspecialchars($listes['annee']) ?></p>
+                    <p>Édité par <?= htmlspecialchars($listes['libelle']) ?></p>
+            </div>
+        </section>
+        <?php endforeach; ?>
+    </div>
+
+
+</div>

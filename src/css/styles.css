@@ -128,25 +128,25 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
     flex-direction: column;
     align-items: center;
 }
-#livreAuteur > form > fieldset{
+#livreAuteur > form > fieldset , #livreAnnee > form > fieldset{
     background-color: black;
     color: blanchedalmond;
     padding: 1em;
     text-align: right;
 }
-#livreAuteur > form > fieldset p{
+#livreAuteur > form > fieldset p, #livreAnnee > form > fieldset p{
     display: inline-block;
 }
 
-#livreAuteur > form > fieldset p label{
+#livreAuteur > form > fieldset p label, #livreAnnee > form > fieldset p label{
     display: none;
 }
 
-#livreAuteur > form > fieldset input{
+#livreAuteur > form > fieldset input, #livreAnnee > form > fieldset input{
     height: 40px;
     width: 100px;
 }
-#livreAuteur > form > fieldset p button{
+#livreAuteur > form > fieldset p button, #livreAnnee > form > fieldset p button{
     color: black;
     padding: 1em;
     height: 40px;
@@ -203,11 +203,11 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
         align-items: center;
     }
 
-    #livreAuteur > form > fieldset input{
+    #livreAuteur > form > fieldset input, #livreAnnee > form > fieldset input{
         width: 200px;
     }
 
-    #livreAuteur > form > fieldset p label{
+    #livreAuteur > form > fieldset p label, #livreAnnee > form > fieldset p label{
         display: inline;
     }
 
@@ -279,7 +279,7 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
         font-size: 1em;
     }
 
-    #livreAuteur > form > fieldset input{
+    #livreAuteur > form > fieldset input, #livreAnnee > form > fieldset input{
         width: 300px;
     }
 }
