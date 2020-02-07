@@ -10,16 +10,26 @@
         </fieldset>
     </form>
     <div id="listesL">
-        <?php foreach($auteurLivres as $listes): ?>
+    <?php foreach($auteurLivres as $listes): ?>
+        <?php
+            $image = "img/". $listes['isbn'] .".jpg";
+            $imageDefaut = "img/0.jpg";
+        ?>
         <section>
-            <figure>
-                <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="img/<?= $listes['isbn'] ?>.jpg" alt="photo du livre"></a>  
-            </figure>
-            <div class="detailsL">
-                <h2><?= htmlspecialchars($listes['titre']) ?></h2>
-                    <p>Publiée en <?= htmlspecialchars($listes['annee']) ?></p>
-                    <p>Édité par <?= htmlspecialchars($listes['libelle']) ?></p>
-            </div>
+        <figure>
+            <?php if(file_exists($image)){ ?>
+            <!-- ici je prend la valeur qui est présente dans ma table detailsLivres a la position zero-->
+            <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="<?= $image ?>" alt="photo du livre"></a> 
+            <?php }else{ ?>
+                <!-- ici je gére l'image par défauts -->
+                <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="<?= $imageDefaut ?>" alt="photo du livre"></a>
+            <?php } ?>   
+        </figure>
+        <div class="detailsL">
+            <h2><?= htmlspecialchars($listes['titre']) ?></h2>
+                <p>Publiée en <?= htmlspecialchars($listes['annee']) ?></p>
+                <p>Édité par <?= htmlspecialchars($listes['libelle']) ?></p>
+        </div>
         </section>
         <?php endforeach; ?>
     </div>

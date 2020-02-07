@@ -1,8 +1,16 @@
 <div id="detailsLivres">
+   <?php
+            $image = "img/". $detailsLivres[0]['isbn'] .".jpg";
+            $imageDefaut = "img/0.jpg";?>
     <section>
         <figure>
-            <!-- ici je prend la valeur qui est présente dans ma table detailsLivres a la position zero-->
-            <img src="img/<?= $detailsLivres[0]['isbn'] ?>.jpg" alt="photo du livre">
+        <?php if(file_exists($image)){ ?>
+        <!-- ici je prend la valeur qui est présente dans ma table detailsLivres a la position zero-->
+            <a href="detailsLivres.php?Id=<?= htmlspecialchars($detailsLivres[0]['isbn']) ?>"><img src="<?= $image ?>" alt="photo du livre"></a> 
+        <?php }else{ ?>
+        <!-- ici je gére l'image par défauts -->
+            <a href="detailsLivres.php?Id=<?= htmlspecialchars($detailsLivres[0]['isbn']) ?>"><img src="<?= $imageDefaut ?>" alt="photo du livre"></a>
+        <?php } ?>
         </figure>
         <div class="detailsL">
             <h2><?= htmlspecialchars($detailsLivres[0]['titre']) ?></h2>

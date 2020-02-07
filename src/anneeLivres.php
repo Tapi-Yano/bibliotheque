@@ -9,7 +9,7 @@ $query=$pdo->prepare('
     ORDER BY titre;
 
 ');
-$query->execute(array($_POST['annee']));
+$query->execute(array($_POST['annee']));/* récuperation via le formulaire de l'annee rentrer */ 
 $anneeLivres = $query->fetchAll();
 
 
