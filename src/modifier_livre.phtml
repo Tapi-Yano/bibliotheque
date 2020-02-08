@@ -1,0 +1,54 @@
+<h2>Modification livre</h2>
+<div id="modifierL">
+    <form action="modifier_livre.php" method="POST">
+        <fieldset>
+            <legend>Modification Livre</legend>
+            <ul>
+                <li>
+                    <input type="hidden" name="isbn" value="<?= Htmlspecialchars($livres['isbn']) ?>">
+                </li>
+                <li>
+                    <label for="titre">Titre :</label>
+                    <input type="text" id="titre" name="titre" value="<?= Htmlspecialchars($livres['titre']) ?>">
+                </li>
+                <li>
+                    <label for="editeur">Editeur :</label>
+                    <select name="editeur" id="editeur" for="editeur">
+                    <?php foreach($resultEditeur as $editeurs): ?>
+                        <option value="<?= Htmlspecialchars($editeurs['id']) ?>"><?= Htmlspecialchars($editeurs['libelle']) ?></option>
+                    <?php endforeach ?>
+                    </select>
+                </li>
+                <li>
+                    <label for="annee">Année :</label>
+                    <input type="number" id="annee" name="annee" value="<?= intval($livres['annee']) ?>">
+                </li>
+
+                <li>
+                    <label for="genre">Genre :</label>
+                    <select name="genre" id="genre" for="genre">
+                    <?php foreach($resultGenre as $genres): ?>
+                        <option value="<?= Htmlspecialchars($genres['id']) ?>"><?= Htmlspecialchars($genres['libelle']) ?></option>
+                    <?php endforeach ?>
+                    </select>
+                </li>                   
+                <li>
+                    <label for="langue">Langue :</label>
+                    <select name="langue" id="langue" for="langue">
+                    <?php foreach($resultLangue as $langues): ?>
+                        <option value="<?= Htmlspecialchars($langues['id']) ?>"><?= Htmlspecialchars($langues['libelle']) ?></option>
+                    <?php endforeach ?>
+                    </select>
+                </li>
+                <li>
+                    <label for="nbpages">Nombre de pages :</label>
+                    <input type="text" id="nbpages" name="nbpages" value="<?= intval($livres['nbpages']) ?>">
+                </li>
+                <li class="boutton">
+                    <button class="buttonSubmit" type="submit">Enregistrer</button>
+                    <a class="buttonEffacer" href="listesLivres.php">Annuler</a>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</div>

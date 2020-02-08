@@ -70,7 +70,7 @@ img{
     padding: 1rem;
 }
 
-#nouveauL, #acceuil{
+#nouveauL, #acceuil, #modifierL{
     background-color: #fff;
     opacity: 0.9;
     padding: 1em;
@@ -82,12 +82,12 @@ h2{
     text-align: center;
 }
 
-#nouveauL li{
+#nouveauL li, #modifierL li{
     list-style-type: none;
     padding: 0.5em;
 }
 
-#nouveauL input, #nouveauL select{
+#nouveauL input, #nouveauL select, #modifierL input, #modifierL select{
     border: 1px solid black;
     border-style: inset;
     border-radius: 5px;
@@ -97,14 +97,16 @@ h2{
     text-align: center;
 }
 
-body > main >  #nouveauL > form > fieldset > ul > li.boutton > button.buttonSubmit{
+body > main >  #nouveauL > form > fieldset > ul > li.boutton > button.buttonSubmit,
+body > main >  #modifierL > form > fieldset > ul > li.boutton > button.buttonSubmit{
     background-color: green;
     color: #EAEAEA;
     border-radius: 10px;
     padding: 1em;
 }
 
-body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
+body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer,
+body > main >  #modifierL > form > fieldset > ul > li.boutton > a.buttonEffacer{
     text-decoration: none;
     background-color: red;
     color: #EAEAEA;
@@ -146,6 +148,7 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
     height: 40px;
     width: 100px;
 }
+
 #livreAuteur > form > fieldset p button, #livreAnnee > form > fieldset p button{
     color: black;
     padding: 1em;
@@ -153,7 +156,48 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
     background-color: #E26B01;
 }
 
+#adminL{
+    background-color: #fff;
+    margin: 1em;
+    text-align: center;
+    padding: 1em;
+}
 
+.adminNewsLivre a{
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th , td{
+    border: 1px solid black;
+    padding: 0.5em;
+}
+
+th:hover, td:hover{
+    background-color: #E26B01;
+}
+
+.modifier{
+    display: block;
+    text-decoration: none;
+    background-color:green;
+    color: blanchedalmond;
+    border-style: outset;
+}
+
+.effacer{
+    display: block;
+    text-decoration: none;
+    background-color:red;
+    color: blanchedalmond;
+    border-style: outset;
+}
 
 /***************************************************************************/
 /*********************** version tablette **********************************/
@@ -183,10 +227,14 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
         font-size: 2em;
     }
 
-    #nouveauL, #acceuil{
+    #nouveauL, #acceuil, #modifierL, #adminL{
         width: 70%;
         margin: auto;
         margin-bottom: 1em;
+    }
+
+    .table{
+        width: 100%;
     }
 
     .flexHeader img{
@@ -247,7 +295,7 @@ body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer{
         font-size: 3em;
     }
 
-    #nouveauL{
+    #nouveauL, #modifierL{
         text-align: center;
         width: 60%;
         margin: auto;

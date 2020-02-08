@@ -9,6 +9,7 @@ $query=$pdo->prepare('
     FROM Livre
     JOIN Auteur ON Livre.isbn = Auteur.idLivre
     JOIN Personne ON Auteur.idPersonne = Personne.id
+    JOIN Editeur ON Livre.editeur = Editeur.id
     WHERE Personne.nom = ?
     ORDER BY Livre.titre;
 

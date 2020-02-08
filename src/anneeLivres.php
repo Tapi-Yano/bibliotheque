@@ -5,6 +5,7 @@ include 'application/connexion_bdd.php';
 $query=$pdo->prepare('
     SELECT *
     FROM Livre
+    JOIN Editeur ON Livre.editeur = Editeur.id
     WHERE annee = ?
     ORDER BY titre;
 

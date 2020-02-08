@@ -1,0 +1,22 @@
+<div id="adminL">
+	<h2 class="adminNewsLivre"><a href="nouveauLivres.php">=> Ajouter un nouveau Livre</a></h2>
+		<table class="table">
+			<caption>Liste des livres à modifier ou supprimer</caption>
+			<thead class="admin_thead">
+				<th>Titre</th>
+				<th>Année</th>
+				<th>Modifier</th>
+				<th>Supprimer</th>
+			</thead>
+			<tbody>
+				<?php foreach ($listeLivres as  $livre): ?>
+				<tr>
+					<td><?= Htmlspecialchars($livre['titre']) ?></td>
+					<td><?= Htmlspecialchars($livre['annee']) ?></td>
+					<td><a class="modifier" href="modifier_livre.php?Id=<?= Htmlspecialchars($livre['isbn'])?>">modifier</a></td>
+					<td><a class="effacer" href="effaceLivres.php?Id=<?= Htmlspecialchars($livre['isbn'])?>">effacer</a></td>
+				</tr>
+				<?php endforeach ?>
+			</tbody>
+		</table>
+</div>
