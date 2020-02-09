@@ -49,6 +49,7 @@ nav li{
 }
 
 nav li a{
+    display: block;
     color: blanchedalmond;
     text-decoration: none;
 }
