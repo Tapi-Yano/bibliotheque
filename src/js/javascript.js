@@ -1,10 +1,6 @@
 "use strict";
 
-// var isbn = document.getElementById("isbn");
-// var titre = document.getElementById("titre");
-// var annee = document.getElementById("annee");
-// var nbpages = document.getElementById("nbpages");
-
+// permet de verifier si les champs son bien remplie
 function validateForm(){ 
     var a = document.forms["myForm"]["isbn"].value;
     var b = document.forms["myForm"]["titre"].value;
@@ -18,11 +14,11 @@ function validateForm(){
         alert("Pensez à taper un titre !");
         return false;
     }
-    else if (c == "") {
-        alert("Pensez à taper une année valide !");
+    else if (c == "" || c < 1800 || c > 2020) {
+        alert("Pensez à taper une année, valide !");
         return false;
     }
-    else if (d == "") {
+    else if (d == "" || d < 5 || d > 500) {
         alert("Pensez à entré un nombre de pages valide !");
         return false;
     }
