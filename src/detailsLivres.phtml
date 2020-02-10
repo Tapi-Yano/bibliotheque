@@ -21,7 +21,10 @@
                     <p>Rôle de <?= htmlspecialchars($details['nom']) ?> <?= htmlspecialchars($details['prenom']) ?> : <?= htmlspecialchars($details['role']) ?></p>
                 <?php endforeach; ?>
                 <p>Disponible en : <?= htmlspecialchars($detailsLivres[0]['langue']) ?></p>
-                <p>Nombres de pages : <?= htmlspecialchars($detailsLivres[0]['nbpages']) ?></p>
+                <?php if(!($detailsLivres[0]['nbpages'] == NULL)){ ?>
+                    <p>Nombres de pages : <?= htmlspecialchars($detailsLivres[0]['nbpages']) ?></p>
+                <?php } ?>
+                
         </div>
     </section>
 </div>
