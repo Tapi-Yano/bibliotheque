@@ -77,7 +77,7 @@ main img:hover{
     padding: 1rem;
 }
 
-#nouveauL, #acceuil, #modifierL{
+#nouveauL, #acceuil, #modifierL,.nouveauL{
     background-color: #fff;
     opacity: 0.9;
     padding: 1em;
@@ -89,12 +89,14 @@ h2{
     text-align: center;
 }
 
-#nouveauL li, #modifierL li{
+#nouveauL li, #modifierL li, .nouveauL li{
     list-style-type: none;
     padding: 0.5em;
 }
 
-#nouveauL input, #nouveauL select, #modifierL input, #modifierL select{
+#nouveauL input, #nouveauL select,
+ #modifierL input, #modifierL select,
+ .nouveauL input{
     border: 1px solid black;
     border-style: inset;
     border-radius: 5px;
@@ -105,7 +107,8 @@ h2{
 }
 
 body > main >  #nouveauL > form > fieldset > ul > li.boutton > button.buttonSubmit,
-body > main >  #modifierL > form > fieldset > ul > li.boutton > button.buttonSubmit{
+body > main >  #modifierL > form > fieldset > ul > li.boutton > button.buttonSubmit,
+#creer{
     background-color: green;
     color: #EAEAEA;
     border-radius: 10px;
@@ -113,7 +116,8 @@ body > main >  #modifierL > form > fieldset > ul > li.boutton > button.buttonSub
 }
 
 body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer,
-body > main >  #modifierL > form > fieldset > ul > li.boutton > a.buttonEffacer{
+body > main >  #modifierL > form > fieldset > ul > li.boutton > a.buttonEffacer,
+body > main > div > form > fieldset  a{
     text-decoration: none;
     background-color: red;
     color: #EAEAEA;
@@ -234,10 +238,14 @@ th:hover, td:hover{
         font-size: 2em;
     }
 
-    #nouveauL, #acceuil, #modifierL, #adminL{
+    #nouveauL, #acceuil, #modifierL, #adminL,.nouveauL{
         width: 70%;
         margin: auto;
         margin-bottom: 1em;
+    }
+
+    .nouveauL{
+        text-align: center;
     }
 
     .table{
@@ -306,7 +314,7 @@ th:hover, td:hover{
         font-size: 3em;
     }
 
-    #nouveauL, #modifierL{
+    #nouveauL, #modifierL, .nouveauL{
         text-align: center;
         width: 60%;
         margin: auto;

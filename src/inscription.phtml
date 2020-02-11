@@ -1,31 +1,33 @@
-<h2>Création d'un compte client</h2>
-    <form action="inscription.php" method="POST">
-        <fieldset>
-            <legend>Identité et coordonnées</legend>
-            <ul>
-                <li>
-                    <label for="nom">Nom :</label>
-                    <input type="text" id="nom" name="nom">
-                </li>
-                <li>
-                    <label for="prenom">Prenom :</label>
-                    <input type="text" id="prenom" name="prenom">
-                </li>
-            </ul>
-        </fieldset>
-        <fieldset>
-            <legend>Informations d'autendification</legend>
+    <h2>Création d'un compte client</h2>
+    <div class="nouveauL">
+        <form action="inscription.php" method="POST">
+            <fieldset>
+                <legend>Identité et coordonnées</legend>
                 <ul>
                     <li>
-                        <label for="mail">E-mail :</label>
-                        <input type="text" id="mail" name="mail">
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom">
                     </li>
                     <li>
-                        <label for="mdp">Mot de passe :</label>
-                        <input type="password" id="mdp" name="mdp">
+                        <label for="prenom">Prenom :</label>
+                        <input type="text" id="prenom" name="prenom">
                     </li>
                 </ul>
-        </fieldset>
-            <button class="buttonEngistrer" type="submit" id="creer">Creer le compte</button>
-            <button class="buttonEffacer" type="reset" id="supprimer">Annuler</button>
-    </fom>
+            </fieldset>
+            <fieldset>
+                <legend>Informations d'autendification</legend>
+                    <ul>
+                        <li>
+                            <label for="mail">E-mail :</label>
+                            <input type="text" id="mail" name="mail" placeholder="exemple@gmail.com">
+                        </li>
+                        <li>
+                            <label for="mdp">Mot de passe :</label>
+                            <input type="password" id="mdp" name="mdp" placeholder="**********">
+                        </li>
+                    </ul>
+                <button class="buttonSubmit" type="submit" id="creer">Creer le compte</button>
+                <a class="buttonEffacer" href="listesLivres.php">Annuler</a>
+            </fieldset>
+        </fom>
+    </div>
