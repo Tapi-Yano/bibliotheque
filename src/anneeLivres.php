@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'application/connexion_bdd.php';
 
 // requête qui permet d'afficher les livres par annee

@@ -1,0 +1,31 @@
+<h2>Création d'un compte client</h2>
+    <form action="inscription.php" method="POST">
+        <fieldset>
+            <legend>Identité et coordonnées</legend>
+            <ul>
+                <li>
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom">
+                </li>
+                <li>
+                    <label for="prenom">Prenom :</label>
+                    <input type="text" id="prenom" name="prenom">
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>Informations d'autendification</legend>
+                <ul>
+                    <li>
+                        <label for="mail">E-mail :</label>
+                        <input type="text" id="mail" name="mail">
+                    </li>
+                    <li>
+                        <label for="mdp">Mot de passe :</label>
+                        <input type="password" id="mdp" name="mdp">
+                    </li>
+                </ul>
+        </fieldset>
+            <button class="buttonEngistrer" type="submit" id="creer">Creer le compte</button>
+            <button class="buttonEffacer" type="reset" id="supprimer">Annuler</button>
+    </fom>

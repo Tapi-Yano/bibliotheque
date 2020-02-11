@@ -3,6 +3,7 @@
             $image = "img/". $listes['isbn'] .".jpg";
             $imageDefaut = "img/0.jpg";?>
     <section>
+        <div>
         <figure>
         <?php if(file_exists($image)){ ?>
             <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="<?= $image ?>" alt="photo du livre"></a> 
@@ -10,10 +11,12 @@
             <a href="detailsLivres.php?Id=<?= htmlspecialchars($listes['isbn']) ?>"><img src="<?= $imageDefaut ?>" alt="photo du livre"></a>
         <?php } ?>   
         </figure>
+        </div>
         <div class="detailsL">
             <h2><?= htmlspecialchars($listes['titre']) ?></h2>
                 <p>Publié en <?= htmlspecialchars($listes['annee']) ?></p>
-                <p>Édité par <?= htmlspecialchars($listes['libelle']) ?></p>
+                <p>Édité par <q><?= htmlspecialchars($listes['nomEditeur']) ?></q></p>
+                <p>Genre : <?= htmlspecialchars($listes['nomGenre']) ?></p>
         </div>
     </section>
     <?php endforeach; ?>

@@ -3,9 +3,12 @@
 include 'application/connexion_bdd.php';
 
 $query='
-    SELECT *
+    SELECT *,
+        Editeur.libelle AS nomEditeur,
+        Genre.libelle AS nomGenre
     FROM Livre
     JOIN Editeur ON Livre.editeur = Editeur.id
+    JOIN Genre ON Livre.genre = Genre.id
     ORDER BY titre;
 
 ';

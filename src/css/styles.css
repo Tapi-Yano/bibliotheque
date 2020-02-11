@@ -54,14 +54,20 @@ nav li a{
     text-decoration: none;
 }
 
-img{
-    max-width: 100%;
+main img{
+    max-width: 150px;
     height: 200px;
+}
+
+main img:hover{
+    transform: scale(1.5);
 }
 
 #listesL, #detailsLivres{
     text-align: center;
 }
+
+
 
 #listesL section, #detailsLivres section{
     background-color: #ffffff;
@@ -260,6 +266,10 @@ th:hover, td:hover{
         display: inline;
     }
 
+    #listesL > section > div.detailsL{
+        width: 350px;
+    }
+
    
 }
 
@@ -330,5 +340,9 @@ th:hover, td:hover{
 
     #livreAuteur > form > fieldset input, #livreAnnee > form > fieldset input{
         width: 300px;
+    }
+
+    #listesL > section > div.detailsL{
+        width: 500px;
     }
 }

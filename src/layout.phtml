@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,16 +13,29 @@
 <body>
     <header>
         <a href="listesLivres.php"><h1>Bibliotheque de livre</h1></a>
+        <?php if($_SESSION['admin'] == 1 ){ ?>
+        <h2>Bienvenue <?= $_SESSION['prenom'] ?></h2>
+        <?php } ?>
         <div class="flexHeader">
             <figure>
                 <a href="index.php"><img src="img/logo-bibliothèque.png" alt="logo"></a>
             </figure>
             <nav>
                 <ul>
+                <?php if($_SESSION['admin'] == 1){ ?>
+                    <li><a href="listesLivres.php">Tous les Livres</a></li>
+                    <li><a href="admin.php">Admin</a></li>
+                    <li><a href="deconnexion.php">Déconnexion</a></li>
+                <?php }else if(isset($_SESSION['connexion'])){ ?>   
                     <li><a href="listesLivres.php">Tous les Livres</a></li>
                     <li><a href="auteurLivres.php">Par auteur</a></li>
                     <li><a href="anneeLivres.php">Par année</a></li>
-                    <li><a href="admin.php">Admin</a></li>
+                    <li><a href="deconnexion.php">deconnexion</a></li>
+                <?php }else{ ?>
+                    <li><a href="listesLivres.php">Tous les Livres</a></li>
+                    <li><a href="inscription.php">Inscription</a></li>
+                    <li><a href="connexion.php">Connexion</a></li>
+               <?php } ?>
                 </ul>
             </nav>
     </div>
@@ -32,10 +46,20 @@
     <footer>
         <nav>
             <ul>
-                <li><a href="listesLivres.php">Tous les Livres</a></li>
-                <li><a href="auteurLivres.php">Par auteur</a></li>
-                <li><a href="anneeLivres.php">Par année</a></li>
-                <li><a href="admin.php">Admin</a></li>
+                <?php if($_SESSION['admin'] == 1){ ?>
+                    <li><a href="listesLivres.php">Tous les Livres</a></li>
+                    <li><a href="admin.php">Admin</a></li>
+                    <li><a href="deconnexion.php">Déconnexion</a></li>
+                <?php }else if(isset($_SESSION['connexion'])){ ?>   
+                    <li><a href="listesLivres.php">Tous les Livres</a></li>
+                    <li><a href="auteurLivres.php">Par auteur</a></li>
+                    <li><a href="anneeLivres.php">Par année</a></li>
+                    <li><a href="deconnexion.php">deconnexion</a></li>
+                <?php }else{ ?>
+                    <li><a href="listesLivres.php">Tous les Livres</a></li>
+                    <li><a href="inscription.php">Inscription</a></li>
+                    <li><a href="connexion.php">Connexion</a></li>
+               <?php } ?>
             </ul>
         </nav>
         <div class="footer">
