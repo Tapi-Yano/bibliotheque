@@ -1,16 +1,16 @@
 <h2>Ajoutez un nouveau livre</h2>
 <div id="nouveauL">
-    <form name="myForm" action="nouveauLivres.php" onsubmit="return validateForm()" method="POST">
+    <form name="formNewL" action="nouveauLivres.php" onsubmit="return validateForm()" method="POST">
         <fieldset>
             <legend>Nouveau Livre</legend>
             <ul>
                 <li>
                     <label for="isbn">isbn :</label>
-                    <input type="text" id="isbn" name="isbn" onfocus="this.value=''">
+                    <input type="text" id="isbn" name="isbn" onfocus="this.value=''"><span class="erreur"></span>
                 </li>
                 <li>
                     <label for="titre">Titre :</label>
-                    <input type="text" id="titre" name="titre" onfocus="this.value=''">
+                    <input type="text" id="titre" name="titre" onfocus="this.value=''"><span class="erreur"></span>
                 </li>
                 <li>
                     <label for="editeur">Editeur :</label>
@@ -22,7 +22,7 @@
                 </li>
                 <li>
                     <label for="annee">Année :</label>
-                    <input type="number" id="annee" name="annee" onfocus="this.value=''">
+                    <input type="number" id="annee" name="annee" onfocus="this.value=''"><span class="erreur"></span>
                 </li>
                 <li>
                     <label for="genre">Genre :</label>
@@ -42,7 +42,7 @@
                 </li>
                 <li>
                     <label for="nbpages">Nombre de pages :</label>
-                    <input type="text" id="nbpages" name="nbpages" onfocus="this.value=''">
+                    <input type="text" id="nbpages" name="nbpages" onfocus="this.value=''" value="0"><span id="erreur"></span>
                 </li>
                 <li class="boutton">
                     <button class="buttonSubmit" type="submit">Enregistrer</button>

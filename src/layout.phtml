@@ -13,7 +13,10 @@
 <body>
     <header>
         <a href="listesLivres.php"><h1>Bibliotheque de livre</h1></a>
-        <?php if($_SESSION['admin'] == 1 ){ ?>
+        <?php if(isset($_SESSION['connexion']) && $_SESSION['admin'] == 1 ){ ?>
+        <h2>Bienvenue <?= $_SESSION['prenom'] ?></h2>
+        <?php } ?>
+        <?php if(isset($_SESSION['connexion']) && $_SESSION['admin'] == 0 ){ ?>
         <h2>Bienvenue <?= $_SESSION['prenom'] ?></h2>
         <?php } ?>
         <div class="flexHeader">
@@ -22,11 +25,11 @@
             </figure>
             <nav>
                 <ul>
-                <?php if($_SESSION['admin'] == 1){ ?>
+                <?php if(isset($_SESSION['connexion']) && $_SESSION['admin'] == 1){ ?>
                     <li><a href="listesLivres.php">Tous les Livres</a></li>
                     <li><a href="admin.php">Admin</a></li>
                     <li><a href="deconnexion.php">Déconnexion</a></li>
-                <?php }else if(isset($_SESSION['connexion'])){ ?>   
+                <?php }else if(isset($_SESSION['connexion'])&& $_SESSION['admin'] == 0){ ?>   
                     <li><a href="listesLivres.php">Tous les Livres</a></li>
                     <li><a href="auteurLivres.php">Par auteur</a></li>
                     <li><a href="anneeLivres.php">Par année</a></li>
@@ -48,11 +51,11 @@
     <footer>
         <nav>
             <ul>
-                <?php if($_SESSION['admin'] == 1){ ?>
+            <?php if(isset($_SESSION['connexion']) && $_SESSION['admin'] == 1){ ?>
                     <li><a href="listesLivres.php">Tous les Livres</a></li>
                     <li><a href="admin.php">Admin</a></li>
                     <li><a href="deconnexion.php">Déconnexion</a></li>
-                <?php }else if(isset($_SESSION['connexion'])){ ?>   
+                <?php }else if(isset($_SESSION['connexion'])&& $_SESSION['admin'] == 0){ ?>  
                     <li><a href="listesLivres.php">Tous les Livres</a></li>
                     <li><a href="auteurLivres.php">Par auteur</a></li>
                     <li><a href="anneeLivres.php">Par année</a></li>

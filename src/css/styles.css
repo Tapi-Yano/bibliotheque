@@ -210,6 +210,14 @@ th:hover, td:hover{
     border-style: outset;
 }
 
+body > main > div > form > fieldset:nth-child(2) > button:nth-child(4){
+    background-color: #E26B01;
+    border-style: outset;
+    color: blanchedalmond;
+    padding: 1em;
+    border-radius: 15px;
+}
+
 /***************************************************************************/
 /*********************** version tablette **********************************/
 /***************************************************************************/
