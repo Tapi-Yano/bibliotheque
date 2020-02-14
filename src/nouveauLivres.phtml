@@ -1,4 +1,4 @@
-<h2>Ajoutez un nouveau livre</h2>
+<h2><i class="fas fa-book-open fa-2X"></i> Ajoutez un nouveau livre</h2>
 <div id="nouveauL">
     <form name="formNewL" action="nouveauLivres.php" onsubmit="return validateForm()" method="POST">
         <fieldset>
@@ -42,10 +42,11 @@
                 </li>
                 <li>
                     <label for="nbpages">Nombre de pages :</label>
-                    <input type="text" id="nbpages" name="nbpages" onfocus="this.value=''" value="0"><span id="erreur"></span>
+                    <input type="text" id="nbpages" name="nbpages" onfocus="this.value=''" value="4"><span id="erreur"></span>
                 </li>
                 <li class="boutton">
                     <button class="buttonSubmit" type="submit">Enregistrer</button>
+                    <button class="reset" type="reset">reset</button>
                     <a class="buttonEffacer" href="listesLivres.php">Annuler</a>
                 </li>
             </ul>

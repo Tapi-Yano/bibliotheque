@@ -1,5 +1,8 @@
 <div id="adminL">
-	<h2 class="adminNewsLivre"><a href="nouveauLivres.php">Cliquez ici pour => Ajouter un nouveau Livre</a></h2>
+	<h3 class="adminNewsLivre"><a href="nouveauLivres.php">Cliquez ici pour => Ajouter un nouveau Livre <i class="fas fa-book"></i></a></h3>
+	<h3 class="adminNewsLivre"><a href="nouveauGenre.php">Cliquez ici pour => Ajouter un nouveau Genre <i class="fas fa-edit"></i></a></h3>
+	<h3 class="adminNewsLivre"><a href="nouvelleLangue.php">Cliquez ici pour => Ajouter une nouvelle Langue <i class="fas fa-language"></i></a></h3>
+	<h3 class="adminNewsLivre"><a href="nouvellePersonne.php">Cliquez ici pour => Ajouter un nouvel Auteur <i class="fas fa-pen-nib"></i></a></h3>
 		<table class="table">
 			<caption>Liste des livres à modifier ou supprimer</caption>
 			<thead class="admin_thead">
@@ -13,8 +16,8 @@
 				<tr>
 					<td><?= Htmlspecialchars($livre['titre']) ?></td>
 					<td><?= Htmlspecialchars($livre['annee']) ?></td>
-					<td><a class="modifier" href="modifier_livre.php?Id=<?= Htmlspecialchars($livre['isbn'])?>">modifier</a></td>
-					<td><a class="effacer" href="effaceLivres.php?Id=<?= Htmlspecialchars($livre['isbn'])?>">effacer</a></td>
+					<td><a class="modifier" href="modifier_livre.php?Id=<?= Htmlspecialchars($livre['isbn'])?>"><i class="fas fa-pen-fancy fa-2x"></i></a></td>
+					<td><a class="effacer" href="effaceLivres.php?Id=<?= Htmlspecialchars($livre['isbn'])?>" onclick="return delete_livre()"><i class="fas fa-trash-alt fa-2x"></i></a></td>
 				</tr>
 				<?php endforeach ?>
 			</tbody>

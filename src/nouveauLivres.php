@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 // connexion bdd
 include 'application/connexion_bdd.php';
 if(empty($_POST)){
@@ -31,6 +31,10 @@ if(empty($_POST)){
         INSERT INTO Livre (isbn , titre, editeur, annee, genre, langue, nbpages)
         VALUES (?, ?, ?, ?, ?, ?, ?)
     ');
+
+    if($_POST['nbpages'] === "" || $_POST['nbpages'] == 0){
+        $_POST['nbpages'] = NULL;
+    }
     $query3->execute(array($_POST['isbn'], $_POST['titre'], $_POST['editeur'], $_POST['annee'], $_POST['genre'], $_POST['langue'], $_POST['nbpages']));
    
     header('Location: listesLivres.php');

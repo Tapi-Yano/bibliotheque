@@ -44,6 +44,9 @@ session_start();
         $genre = Htmlspecialchars($_POST['genre']);
         $langue = Htmlspecialchars($_POST['langue']);
         $nbpages = Htmlspecialchars($_POST['nbpages']);
+        if($_POST['nbpages'] === "" || $_POST['nbpages'] == 0){
+            $nbpages = NULL;
+        }
         $id=$_POST['isbn'];
 
         $bdd=$pdo->prepare('

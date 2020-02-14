@@ -8,16 +8,17 @@
     <title>bibliotheque</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico&display=swap">
+    <script src="https://kit.fontawesome.com/f2574f15cd.js" crossorigin="anonymous"></script>
     <script src="js/javascript.js"></script>
 </head>
 <body>
     <header>
         <a href="listesLivres.php"><h1>Bibliotheque de livre</h1></a>
         <?php if(isset($_SESSION['connexion']) && $_SESSION['admin'] == 1 ){ ?>
-        <h2>Bienvenue <?= $_SESSION['prenom'] ?></h2>
+        <h2 style="color: #E26B01">Bienvenue <?= $_SESSION['prenom'] ?></h2>
         <?php } ?>
         <?php if(isset($_SESSION['connexion']) && $_SESSION['admin'] == 0 ){ ?>
-        <h2>Bienvenue <?= $_SESSION['prenom'] ?></h2>
+        <h2 style="color: #E26B01">Bienvenue <?= $_SESSION['prenom'] ?></h2>
         <?php } ?>
         <div class="flexHeader">
             <figure>
@@ -71,6 +72,9 @@
         </nav>
         <div class="footer">
         <p>Fait par l'entreprise yc-développeur France</p>
+        <a href="#"><i class="fab fa-facebook-square fa-2x facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram-square fa-2x instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter-square fa-2x twitter"></i></a>
         <p>© 2020 Yann & Clément yc-développeur@gmail.com</p>
         </div>
     </footer>

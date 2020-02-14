@@ -15,8 +15,9 @@ $query='
 
 $resultat = $pdo->query($query);
 $listes_Livres = $resultat->fetchAll();
-// var_dump($listes_Livres);
+//var_dump($listes_Livres);
 
 
 $template = 'listesLivres';
 include 'layout.phtml';
+

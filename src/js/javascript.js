@@ -1,7 +1,7 @@
 "use strict";
 
 // permet de verifier si les champs son bien remplie
-function validateForm(){ 
+function validateForm(){
     var a = document.forms["formNewL"]["isbn"].value;
     var b = document.forms["formNewL"]["titre"].value;
     var c = document.forms["formNewL"]["annee"].value;
@@ -33,13 +33,23 @@ function validateForm(){
     }else{
         document.getElementById("annee").style.backgroundColor = "";
     }
-    if(d == 0) {
+    if(d == "") {
         return true;
     }
-    if (d == "" || d < 4 || d > 500) {
+    if (d < 4 || d > 500) {
         // alert("Pensez à entré un nombre de pages valide !");
         document.getElementById("nbpages").focus();
         document.getElementsByClassName("erreur").innerHTML="Il faut un nombre de pages > 5 Chef!!";
         return false;
     }
-};
+}
+
+var repondre;
+function delete_livre(){
+    repondre = confirm('Confirmer suppression ?');
+    if(repondre == true){
+        return true;
+    }else{
+        return false;
+    }
+}

@@ -106,23 +106,21 @@ h2{
     text-align: center;
 }
 
-body > main >  #nouveauL > form > fieldset > ul > li.boutton > button.buttonSubmit,
-body > main >  #modifierL > form > fieldset > ul > li.boutton > button.buttonSubmit,
+button.buttonSubmit,
 #creer{
     background-color: green;
-    color: #EAEAEA;
+    color: blanchedalmond;
     border-radius: 10px;
     padding: 1em;
 }
 
-body > main > #nouveauL > form > fieldset > ul > li.boutton > a.buttonEffacer,
-body > main >  #modifierL > form > fieldset > ul > li.boutton > a.buttonEffacer,
-body > main > div > form > fieldset  a{
+a.buttonEffacer,
+a.buttonEffacer{
     text-decoration: none;
     background-color: red;
-    color: #EAEAEA;
+    color:  blanchedalmond;
     border-radius: 10px;
-    padding: 0.6em;
+    padding: 0.83em;
 }
 
 .flexHeader img{
@@ -210,13 +208,46 @@ th:hover, td:hover{
     border-style: outset;
 }
 
-body > main > div > form > fieldset:nth-child(2) > button:nth-child(4){
+button.reset{
     background-color: #E26B01;
     border-style: outset;
     color: blanchedalmond;
     padding: 1em;
     border-radius: 15px;
 }
+
+.centerForm{
+    text-align: center;
+}
+
+i{
+    color: #E26B01;
+}
+
+#adminL td a i{
+    color: blanchedalmond;
+}
+
+.footer a i{
+    margin: 0.1em;
+}
+
+.footer a .facebook{
+    color: #4366B2;
+    background-color: #fff;
+}
+
+.footer a .instagram{
+    color: #CD2660;
+    background-color: #fff;
+}
+
+.footer a .twitter{
+    color: #1EA1F2;
+    background-color: #fff;
+}
+
+
 
 /***************************************************************************/
 /*********************** version tablette **********************************/
@@ -271,7 +302,6 @@ body > main > div > form > fieldset:nth-child(2) > button:nth-child(4){
         justify-content: space-between;
         padding: 2rem;
         font-size: 1em;
-        align-items: center;
     }
 
     #livreAuteur > form > fieldset input, #livreAnnee > form > fieldset input{
@@ -285,7 +315,6 @@ body > main > div > form > fieldset:nth-child(2) > button:nth-child(4){
     #listesL > section > div.detailsL{
         width: 350px;
     }
-
    
 }
 
