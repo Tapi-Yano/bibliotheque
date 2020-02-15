@@ -6,11 +6,11 @@
             <ul>
                 <li>
                     <label for="isbn">isbn :</label>
-                    <input type="text" id="isbn" name="isbn" onfocus="this.value=''"><span class="erreur"></span>
+                    <input type="text" id="isbn" name="isbn" onfocus="this.value=''"><span id="erreurISBN"></span>
                 </li>
                 <li>
                     <label for="titre">Titre :</label>
-                    <input type="text" id="titre" name="titre" onfocus="this.value=''"><span class="erreur"></span>
+                    <input type="text" id="titre" name="titre" onfocus="this.value=''"><span id="erreurTITRE"></span>
                 </li>
                 <li>
                     <label for="editeur">Editeur :</label>
@@ -22,7 +22,7 @@
                 </li>
                 <li>
                     <label for="annee">Année :</label>
-                    <input type="number" id="annee" name="annee" onfocus="this.value=''"><span class="erreur"></span>
+                    <input type="number" id="annee" name="annee" onfocus="this.value=''"><span id="erreurANNEE"></span>
                 </li>
                 <li>
                     <label for="genre">Genre :</label>
@@ -42,12 +42,12 @@
                 </li>
                 <li>
                     <label for="nbpages">Nombre de pages :</label>
-                    <input type="text" id="nbpages" name="nbpages" onfocus="this.value=''" value="4"><span id="erreur"></span>
+                    <input type="text" id="nbpages" name="nbpages" onfocus="this.value=''" value="4"><span id="erreurNBPAGES"></span>
                 </li>
                 <li class="boutton">
                     <button class="buttonSubmit" type="submit">Enregistrer</button>
                     <button class="reset" type="reset">reset</button>
-                    <a class="buttonEffacer" href="listesLivres.php">Annuler</a>
+                    <a class="buttonEffacer" href="admin.php">Annuler</a>
                 </li>
             </ul>
         </fieldset>

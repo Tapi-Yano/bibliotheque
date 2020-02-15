@@ -15,6 +15,7 @@ $informationM = $query->fetch();
         $_SESSION['connexion'] = TRUE;
         $_SESSION['nom'] = $informationM['nom'];
         $_SESSION['prenom'] = $informationM['prenom'];
+        $_SESSION['mail'] = $informationM['email'];
         $_SESSION['admin'] = $informationM['admin'];
 
         header('location: listesLivres.php');

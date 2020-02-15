@@ -46,6 +46,7 @@ nav li{
     margin: auto;
     margin-bottom: 1rem;
     list-style-type: none;
+    /* align-items: center; */
 }
 
 nav li a{
@@ -63,6 +64,10 @@ main img:hover{
     transform: scale(1.5);
 }
 
+#accueil img{
+    transform: none;
+}
+
 #listesL, #detailsLivres{
     text-align: center;
 }
@@ -77,9 +82,9 @@ main img:hover{
     padding: 1rem;
 }
 
-#nouveauL, #acceuil, #modifierL,.nouveauL{
+#nouveauL, .bg_image_accueil #accueil, #modifierL,.nouveauL{
     background-color: #fff;
-    opacity: 0.9;
+    opacity: unset;
     padding: 1em;
     margin: 0.5em;
 }
@@ -139,30 +144,42 @@ a.buttonEffacer{
     flex-direction: column;
     align-items: center;
 }
-#livreAuteur > form > fieldset , #livreAnnee > form > fieldset{
+
+footer nav{
+    background-color: #666666;
+}
+#livreAuteur > form > fieldset , #livreAnnee > form > fieldset,
+.barRecherche form fieldset{
     background-color: black;
     color: blanchedalmond;
     padding: 1em;
     text-align: right;
 }
-#livreAuteur > form > fieldset p, #livreAnnee > form > fieldset p{
-    display: inline-block;
-}
 
-#livreAuteur > form > fieldset p label, #livreAnnee > form > fieldset p label{
+
+#livreAuteur > form > fieldset p label, #livreAnnee > form > fieldset p label,
+.barRecherche form fieldset p label{
     display: none;
 }
 
-#livreAuteur > form > fieldset input, #livreAnnee > form > fieldset input{
+#livreAuteur > form > fieldset input, #livreAnnee > form > fieldset input,
+.barRecherche form fieldset input{
     height: 40px;
-    width: 100px;
+    width: 100%;
 }
 
-#livreAuteur > form > fieldset p button, #livreAnnee > form > fieldset p button{
+#livreAuteur > form > fieldset p button, #livreAnnee > form > fieldset p button,
+.barRecherche form fieldset p button{
     color: black;
     padding: 1em;
     height: 40px;
     background-color: #E26B01;
+}
+
+.barRecherche form fieldset p.flexBR,
+#livreAuteur  form  fieldset p.flexBR, #livreAnnee  form  fieldset p.flexBR{
+    display: flex;
+    flex-direction: column;
 }
 
 #adminL{
@@ -207,7 +224,6 @@ th:hover, td:hover{
     color: blanchedalmond;
     border-style: outset;
 }
-
 button.reset{
     background-color: #E26B01;
     border-style: outset;
@@ -220,7 +236,7 @@ button.reset{
     text-align: center;
 }
 
-i{
+i,span,em{
     color: #E26B01;
 }
 
@@ -245,6 +261,24 @@ i{
 .footer a .twitter{
     color: #1EA1F2;
     background-color: #fff;
+}
+
+#adminL h3 a:hover{
+    color: #E26B01;
+}
+
+#accueil figure{
+    text-align: center;
+    max-width: 100%;
+}
+
+#accueil figure img{
+    max-width: 100%;
+    height: auto;
+}
+
+#adminL h3 a{
+    font-size: small;
 }
 
 
@@ -277,8 +311,8 @@ i{
         font-size: 2em;
     }
 
-    #nouveauL, #acceuil, #modifierL, #adminL,.nouveauL{
-        width: 70%;
+    #nouveauL,.bg_image_accueil #accueil, #modifierL, #adminL,.nouveauL{
+        width: 85%;
         margin: auto;
         margin-bottom: 1em;
     }
@@ -304,17 +338,37 @@ i{
         font-size: 1em;
     }
 
-    #livreAuteur > form > fieldset input, #livreAnnee > form > fieldset input{
+    #livreAuteur > form > fieldset input, #livreAnnee > form > fieldset input,
+    .barRecherche form fieldset input{
         width: 200px;
     }
 
-    #livreAuteur > form > fieldset p label, #livreAnnee > form > fieldset p label{
+    #livreAuteur > form > fieldset p label, #livreAnnee > form > fieldset p label,
+    .barRecherche form fieldset p label{
         display: inline;
+        margin: 1em;
     }
 
     #listesL > section > div.detailsL{
         width: 350px;
     }
+    
+    .barRecherche form fieldset p.flexBR,
+    #livreAuteur  form  fieldset p.flexBR, #livreAnnee  form  fieldset p.flexBR{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .bg_image_accueil{
+        background-image: url(../img/bgi-biblio.jpeg);
+        
+    }
+
+    #adminL h3 a{
+        font-size: medium;
+    }
+
    
 }
 
@@ -358,9 +412,9 @@ i{
         margin-bottom: 1em;
     }
 
-    #acceuil{
+    .bg_image_accueil #accueil{
         text-align: center;
-        width: 90%;
+        width: 70%;
         margin: auto;
     }
 
@@ -383,11 +437,16 @@ i{
         font-size: 1em;
     }
 
-    #livreAuteur > form > fieldset input, #livreAnnee > form > fieldset input{
+    #livreAuteur > form > fieldset input, #livreAnnee > form > fieldset input,
+    .barRecherche form fieldset input{
         width: 300px;
     }
 
     #listesL > section > div.detailsL{
         width: 500px;
+    }
+
+    #adminL h3 a{
+        font-size: large;
     }
 }

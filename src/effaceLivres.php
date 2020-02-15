@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 include 'application/connexion_bdd.php';
  
 // requête pour effacer un livre de la base de données

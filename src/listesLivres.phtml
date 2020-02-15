@@ -1,3 +1,14 @@
+<div class="barRecherche">
+    <form action="auteurLivres.php" method="POST">
+            <fieldset class="barreDeRecherche">
+                <p class="flexBR">
+                    <label for="auteur">Recherchez votre Auteur</label>
+                    <input type="text" name="auteur" id="auteur" placeholder="Entrez votre recherche">
+                    <button type="submit">Recherche</button>
+                </p>
+            </fieldset>
+    </form>
+</div>
 <div id="listesL">
     <?php foreach($listes_Livres as $listes): 
             $image = "img/". $listes['isbn'] .".jpg";

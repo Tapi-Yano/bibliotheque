@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>bibliotheque</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico&display=swap">
     <script src="https://kit.fontawesome.com/f2574f15cd.js" crossorigin="anonymous"></script>
+    <title>bibliotheque</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo-bibliothèque.png" />
     <script src="js/javascript.js"></script>
 </head>
 <body>
@@ -18,7 +19,7 @@
         <h2 style="color: #E26B01">Bienvenue <?= $_SESSION['prenom'] ?></h2>
         <?php } ?>
         <?php if(isset($_SESSION['connexion']) && $_SESSION['admin'] == 0 ){ ?>
-        <h2 style="color: #E26B01">Bienvenue <?= $_SESSION['prenom'] ?></h2>
+        <h2>Bienvenue <?= $_SESSION['prenom'] ?></h2>
         <?php } ?>
         <div class="flexHeader">
             <figure>
@@ -26,18 +27,19 @@
             </figure>
             <nav>
                 <ul>
-                <?php if(isset($_SESSION['connexion']) && $_SESSION['admin'] == 1){ ?>
+                <?php if(isset($_SESSION['connexion']) && $_SESSION['admin'] == 1){ ?> 
+                    <li><a href="index.php"><i class="fas fa-home"></i></a></li> 
                     <li><a href="listesLivres.php">Tous les Livres</a></li>
                     <li><a href="admin.php">Admin</a></li>
                     <li><a href="deconnexion.php">Déconnexion</a></li>
-                <?php }else if(isset($_SESSION['connexion'])&& $_SESSION['admin'] == 0){ ?>   
+                <?php }else if(isset($_SESSION['connexion'])&& $_SESSION['admin'] == 0){ ?> 
+                    <li><a href="index.php"><i class="fas fa-home"></i></a></li> 
                     <li><a href="listesLivres.php">Tous les Livres</a></li>
-                    <li><a href="auteurLivres.php">Par auteur</a></li>
                     <li><a href="anneeLivres.php">Par année</a></li>
                     <li><a href="deconnexion.php">deconnexion</a></li>
                 <?php }else{ ?>
+                    <li><a href="index.php"><i class="fas fa-home"></i></a></li>
                     <li><a href="listesLivres.php">Tous les Livres</a></li>
-                    <li><a href="auteurLivres.php">Par Auteur</a></li>
                     <li><a href="anneeLivres.php">Par Année</a></li>
                     <li><a href="inscription.php">Inscription</a></li>
                     <li><a href="connexion.php">Connexion</a></li>
@@ -58,12 +60,10 @@
                     <li><a href="deconnexion.php">Déconnexion</a></li>
                 <?php }else if(isset($_SESSION['connexion'])&& $_SESSION['admin'] == 0){ ?>  
                     <li><a href="listesLivres.php">Tous les Livres</a></li>
-                    <li><a href="auteurLivres.php">Par auteur</a></li>
                     <li><a href="anneeLivres.php">Par année</a></li>
                     <li><a href="deconnexion.php">deconnexion</a></li>
                 <?php }else{ ?>
                     <li><a href="listesLivres.php">Tous les Livres</a></li>
-                    <li><a href="auteurLivres.php">Par Auteur</a></li>
                     <li><a href="anneeLivres.php">Par Année</a></li>
                     <li><a href="inscription.php">Inscription</a></li>
                     <li><a href="connexion.php">Connexion</a></li>
