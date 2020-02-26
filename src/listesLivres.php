@@ -1,4 +1,5 @@
-<?php session_start();
+<?php 
+session_start();
 // connexion avec la base de données
 include 'application/connexion_bdd.php';
 

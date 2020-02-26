@@ -1,4 +1,5 @@
-<?php session_start();
+<?php 
+session_start();
 include 'application/connexion_bdd.php';
 
 // requête pour inserer des nouveaux utilisateurs

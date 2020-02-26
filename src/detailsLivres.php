@@ -1,4 +1,5 @@
-<?php session_start();
+<?php 
+session_start();
 // connexion à la base de données
 include 'application/connexion_bdd.php';
 // requête pour afficher tout le détails du livre selectionner

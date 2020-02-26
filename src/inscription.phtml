@@ -5,12 +5,12 @@
                 <legend>Identité et coordonnées</legend>
                 <ul>
                     <li>
-                        <label for="nom">Nom :</label>
-                        <input type="text" id="nom" name="nom">
+                        <label for="nom">Nom : *</label>
+                        <input type="text" id="nom" name="nom" autofocus required>
                     </li>
                     <li>
-                        <label for="prenom">Prenom :</label>
-                        <input type="text" id="prenom" name="prenom">
+                        <label for="prenom">Prenom : *</label>
+                        <input type="text" id="prenom" name="prenom" required>
                     </li>
                 </ul>
             </fieldset>
@@ -18,12 +18,12 @@
                 <legend>Informations d'autendification</legend>
                     <ul>
                         <li>
-                            <label for="mail">E-mail :</label>
-                            <input type="text" id="mail" name="mail" placeholder="exemple@gmail.com">
+                            <label for="mail">E-mail : *</label>
+                            <input type="text" id="mail" name="mail" placeholder="exemple@gmail.com" required>
                         </li>
                         <li>
-                            <label for="mdp">Mot de passe :</label>
-                            <input type="password" id="mdp" name="mdp" placeholder="**********">
+                            <label for="mdp">Mot de passe : *</label>
+                            <input type="password" id="mdp" name="mdp" placeholder="**********" required>
                         </li>
                     </ul>
                 <button class="buttonSubmit" type="submit" id="creer">Creer le compte</button>

@@ -125,7 +125,7 @@ a.buttonEffacer{
     background-color: red;
     color:  blanchedalmond;
     border-radius: 10px;
-    padding: 0.83em;
+    padding: 0.6em;
 }
 
 .flexHeader img{
@@ -279,6 +279,10 @@ i,span,em{
 
 #adminL h3 a{
     font-size: small;
+}
+
+:required{
+    background-color: #ffb3b3;
 }
 
 
