@@ -2,7 +2,7 @@
 session_start();
 include 'application/connexion_bdd.php';
 
-// recupération des information d'un membre inscrit
+// recupération des information d'un membre inscrit test pour git
 $query = $pdo->prepare('
     SELECT *
     FROM membres
