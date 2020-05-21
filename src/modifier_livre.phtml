@@ -1,6 +1,6 @@
 <h2>Modification livre</h2>
 <div id="modifierL">
-    <form name="formNewL" action="modifier_livre.php" onsubmit="return validateForm()" method="POST">
+    <form action="modifier_livre.php" method="POST">
         <fieldset>
             <legend>Modification Livre</legend>
             <ul>
@@ -9,7 +9,7 @@
                 </li>
                 <li>
                     <label for="titre">Titre :</label>
-                    <input type="text" id="titre" name="titre" onfocus="this.value=''" value="<?= Htmlspecialchars($livres['titre']) ?>"><span id="erreurTITRE"></span>
+                    <input type="text" id="titre" name="titre" value="<?= Htmlspecialchars($livres['titre']) ?>">
                 </li>
                 <li>
                     <label for="editeur">Editeur :</label>
@@ -21,7 +21,7 @@
                 </li>
                 <li>
                     <label for="annee">Année :</label>
-                    <input type="number" id="annee" name="annee" onfocus="this.value=''" value="<?= intval($livres['annee']) ?>"><span id="erreurANNEE"></span>
+                    <input type="number" id="annee" name="annee" value="<?= intval($livres['annee']) ?>">
                 </li>
 
                 <li>
@@ -42,7 +42,7 @@
                 </li>
                 <li>
                     <label for="nbpages">Nombre de pages :</label>
-                    <input type="text" id="nbpages" name="nbpages" onfocus="this.value''" value="<?= intval($livres['nbpages']) ?>"><span id="erreurNBPAGES"></span>
+                    <input type="text" id="nbpages" name="nbpages" value="<?= intval($livres['nbpages']) ?>">
                 </li>
                 <li class="boutton">
                     <button class="buttonSubmit" type="submit">Enregistrer</button>

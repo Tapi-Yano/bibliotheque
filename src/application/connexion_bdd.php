@@ -7,6 +7,6 @@ try{
 }
 catch (Exception $e)
 {
-	echo '<p>la connexion à la base de données est impossible !</p>';
-	die('Erreur : ' . $e->getMessage($message));
+	echo '<p style="background-color: red; text-align: center;">la connexion à la base de données est impossible !</p>';
+	die('Erreur : ' . $e->getMessage());
 }

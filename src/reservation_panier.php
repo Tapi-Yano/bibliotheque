@@ -35,12 +35,14 @@ $query2 = $pdo->prepare('
     VALUES (?, ?, NOW(), ?)
 ');
 $query2->execute(array($_GET['Id'], $livre_resa['titre'],$_SESSION['id']));
+echo'<p style="background-color: green; text-align: center; height: 40px; padding-top: 7px; color: white;"> livre ajouté à liste de réservation </p>';
 var_dump($query2);
 
 // on récupère le contenu de la table de reservation
 
 $query3 = $pdo->prepare('
-    SELECT *
+    SELECT *,
+    DATE_FORMAT(date_reservation, "%d/%m/%Y") AS date_fr
     FROM Reservation
     WHERE id_membres=?;
 ');

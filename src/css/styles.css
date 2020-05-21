@@ -285,6 +285,19 @@ i,span,em{
     background-color: #ffb3b3;
 }
 
+#detailsLivres .detailsL .boutonResa{
+    text-decoration: none;
+    color: black;
+}
+
+#listesL .listeAuteur{
+    width: 90%;
+    margin: auto;
+}
+
+#listesL .listeAuteur .table{
+    background-color: #fff;
+}
 
 
 /***************************************************************************/
@@ -373,6 +386,10 @@ i,span,em{
         font-size: medium;
     }
 
+    #listesL .listeAuteur{
+        width: 70%;
+        margin: auto;
+    }
    
 }
 
@@ -452,5 +469,10 @@ i,span,em{
 
     #adminL h3 a{
         font-size: large;
+    }
+
+    #listesL .listeAuteur{
+        width: 60%;
+        margin: auto;
     }
 }
