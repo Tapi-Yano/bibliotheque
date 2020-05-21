@@ -1,18 +1,20 @@
 <h2>Le contenu de votre panier de réservation</h2>
-<table class="table">
-    <caption>Liste des livres reservés</caption>
-    <thead class="admin_thead">
-        <th>ISBN</th>
-        <th>TITRE</th>
-        <th>Date de Réservation</th>
-    </thead>
-    <tbody>
-        <?php foreach ($liste_resa as  $liste): ?>
-        <tr>
-            <td><?= Htmlspecialchars($liste['isbn_livre']) ?></td>
-            <td><?= Htmlspecialchars($liste['titre_livre_resa']) ?></td>
-            <td><?= Htmlspecialchars($liste['date_fr']) ?></td>
-        </tr>
-        <?php endforeach ?>
-    </tbody>
-</table>
+<div id="resa_livre">
+    <table class="table">
+        <caption>Liste des livres reservés</caption>
+        <thead class="admin_thead">
+            <th>ISBN</th>
+            <th>TITRE</th>
+            <th>Date de Réservation</th>
+        </thead>
+        <tbody>
+            <?php foreach ($liste_resa as  $liste): ?>
+            <tr>
+                <td><?= Htmlspecialchars($liste['isbn_livre']) ?></td>
+                <td><?= Htmlspecialchars($liste['titre_livre_resa']) ?></td>
+                <td><?= Htmlspecialchars($liste['date_fr']) ?></td>
+            </tr>
+            <?php endforeach ?>
+        </tbody>
+    </table>
+</div>

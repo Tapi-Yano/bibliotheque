@@ -290,13 +290,19 @@ i,span,em{
     color: black;
 }
 
-#listesL .listeAuteur{
+#listesL .listeAuteur,
+#resa_livre table{
     width: 90%;
     margin: auto;
 }
 
-#listesL .listeAuteur .table{
+#listesL .listeAuteur .table,
+#resa_livre table{
     background-color: #fff;
+}
+
+#resa_livre{
+    margin-bottom: 10px;
 }
 
 
@@ -386,7 +392,8 @@ i,span,em{
         font-size: medium;
     }
 
-    #listesL .listeAuteur{
+    #listesL .listeAuteur,
+    #resa_livre table{
         width: 70%;
         margin: auto;
     }
@@ -471,7 +478,8 @@ i,span,em{
         font-size: large;
     }
 
-    #listesL .listeAuteur{
+    #listesL .listeAuteur,
+    #resa_livre table{
         width: 60%;
         margin: auto;
     }
