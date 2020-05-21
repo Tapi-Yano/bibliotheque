@@ -13,6 +13,7 @@ $informationM = $query->fetch();
 //var_dump($informationM);
     if(isset($_POST['mail']) && $_POST['mdp'] == $informationM['mot_de_passe']){
         $_SESSION['connexion'] = TRUE;
+        $_SESSION['id'] = $informationM['id'];
         $_SESSION['nom'] = $informationM['nom'];
         $_SESSION['prenom'] = $informationM['prenom'];
         $_SESSION['mail'] = $informationM['email'];

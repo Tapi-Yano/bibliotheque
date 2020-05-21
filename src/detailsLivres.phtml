@@ -24,8 +24,8 @@
                 <?php if(!($detailsLivres[0]['nbpages'] == NULL)){ ?>
                     <p>Nombres de pages : <?= htmlspecialchars($detailsLivres[0]['nbpages']) ?></p>
                 <?php } ?>
-                <?php if(isset($_SESSION['connexion'])){ ?>
-                <a href="reservation.php">Reserver <i class="far fa-plus-square fa-2X"></i></a>
+                <?php if(isset($_SESSION['connexion'])){ var_dump($_SESSION['id']);?>
+                <a href="reservation_panier.php?Id=<?= htmlspecialchars($detailsLivres[0]['isbn']) ?>">Reserver <i class="far fa-plus-square fa-2X"></i></a>
                 <?php } ?>
         </div>
     </section>
