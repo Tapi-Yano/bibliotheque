@@ -12,13 +12,10 @@ if(empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['mail']) || e
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $mail = $_POST['mail'];
+    
     // confirmation par mail
-    // Mail
-    $header="MIME-Version: 1.0\r\n";
-    $header.='From:"[VOUS]"<yano.c@hotmail.com>'."\n";
-    $header.='Content-Type:text/html; charset="uft-8"'."\n";
-    $header.='Content-Transfer-Encoding: 8bit';
-    $objet = 'Confirmation de votre inscription' ;
+    $to      = $mail;
+    $subject = 'Confirmation de votre inscription';
     $message = '
     <html>
     <head>
@@ -26,13 +23,16 @@ if(empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['mail']) || e
     </head>
     <body>
         <p>Bonjour Mr/Mmme '. $nom .' '. $prenom .'</p>
-        <p>blablablabla</p>
+        <p> Je vous envoie un mail de confirmation concernant votre incription sur notre site \'bibliotèhque\'</p>
     </body>
     </html>';
-                        
-    //Envoi du mail
-    mail($mail, $objet, $message, $header);
-    var_dump(mail());
+    $headers = 'From: yano.c@hotmail.com' . "\r\n" .
+    'Reply-To: yano.c@hotmail.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+    //fonction mail qui permet l'envoi du mail et son contenu
+    mail($to, $subject, $message, $headers);
+    var_dump($mail);
+
 
     $query = $pdo->prepare('
     INSERT INTO membres (nom, prenom, email, mot_de_passe, admin)
