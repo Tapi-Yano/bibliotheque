@@ -1,0 +1,22 @@
+<h2>liste de toutes les réservation des livres pour tout les membres</h2>
+<div id="resa_livre">
+    <table class="table">
+        <caption>Liste des livres reservés</caption>
+        <thead class="admin_thead">
+            <th>ISBN</th>
+            <th>TITRE</th>
+            <th>Date de Réservation</th>
+            <th>Nom Prénom Membres</th>
+        </thead>
+        <tbody>
+            <?php foreach ($admin_list_resa as  $liste): ?>
+            <tr>
+                <td><?= Htmlspecialchars($liste['isbn_livre']) ?></td>
+                <td><?= Htmlspecialchars($liste['titre_livre_resa']) ?></td>
+                <td><?= Htmlspecialchars($liste['date_fr']) ?></td>
+                <td><?= Htmlspecialchars($liste['nom']) ?> <?= Htmlspecialchars($liste['prenom']) ?></td>
+            </tr>
+            <?php endforeach ?>
+        </tbody>
+    </table>
+</div>

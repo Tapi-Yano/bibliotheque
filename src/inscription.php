@@ -12,7 +12,7 @@ if(empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['mail']) || e
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $mail = $_POST['mail'];
-    
+
     // confirmation par mail
     $to      = $mail;
     $subject = 'Confirmation de votre inscription';
