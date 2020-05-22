@@ -23,11 +23,11 @@ if(empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['mail']) || e
     </head>
     <body>
         <p>Bonjour Mr/Mmme '. $nom .' '. $prenom .'</p>
-        <p> Je vous envoie un mail de confirmation concernant votre incription sur notre site \'bibliotèhque\'</p>
+        <p> Je vous envoi un mail de confirmation conçernant votre incription sur notre site \'bibliotèhque\'</p>
     </body>
     </html>';
-    $headers = 'From: yano.c@hotmail.com' . "\r\n" .
-    'Reply-To: yano.c@hotmail.com' . "\r\n" .
+    $headers = 'From: yano.c@hotmail.com' . "\n" .
+    'Reply-To: yano.c@hotmail.com' . "\n" .
     'X-Mailer: PHP/' . phpversion();
     //fonction mail qui permet l'envoi du mail et son contenu
     mail($to, $subject, $message, $headers);

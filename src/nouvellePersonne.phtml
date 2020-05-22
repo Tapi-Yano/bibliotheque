@@ -1,9 +1,16 @@
 <div class="centerForm">
     <h2><i class="fas fa-pen-nib"></i> Auteurs</h2>
     <div class="nouveauL">
-        <?php foreach($personnes as $personne): ?>
-        <p>Auteurs: <?= $personne['nom'] ?> <?= $personne['prenom'] ?></p>
-        <?php endforeach; ?>
+        <table id="personne">
+            <tr>
+                <th>Personnes</th>
+            </tr>
+            <?php foreach($personnes as $personne): ?>
+            <tr>
+                <td><?= $personne['nom'] ?> <?= $personne['prenom'] ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
     </div>
     <h2><i class="fas fa-pen-nib"></i> Ajoutez une nouvelle personne</h2>
     <div class="nouveauL">

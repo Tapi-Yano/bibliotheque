@@ -2,9 +2,16 @@
     <div class="centerForm">
         <h2><i class="fas fa-edit fa-2X"></i> Genres</h2>
         <div class="nouveauL">
-            <?php foreach($genres as $genre): ?>
-            <p>Genre: <?= $genre['libelle'] ?></p>
-            <?php endforeach; ?>
+            <table id="genre">
+                <tr>
+                    <th>Genres</th>
+                </tr>
+                <?php foreach($genres as $genre): ?>
+                <tr>
+                    <td><?= $genre['libelle'] ?></td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
         </div>
     </div>
     <div class="centerForm">
