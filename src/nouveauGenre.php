@@ -19,6 +19,7 @@ if(isset($_POST['genre'])){
     Values(?)
     '); 
 $query->execute(array($_POST['genre']));
+header('Location: nouveauGenre.php');
 }
 
 

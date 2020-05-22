@@ -18,6 +18,7 @@ if(isset($_POST['langue'])){
 ');
 
 $query->execute(array($_POST['langue']));
+header('Location: nouvelleLangue.php');
 }
 
 
