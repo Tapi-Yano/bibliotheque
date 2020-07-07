@@ -13,8 +13,16 @@ $query=$pdo->prepare('
 ');
 $query->execute(array($_POST['annee']));/* récuperation via le formulaire de l'annee rentrer */ 
 $anneeLivres = $query->fetchAll();
-
-
-
-$template = 'anneeLivres';
-include 'layout.phtml';
+$message_erreur = "<p style='text-align: center;background-color: red;color: white;padding: 2%;'>Désolé aucun livre de la bibliothèque n'a été publié cette année là</p>";
+$message_valider = "<p style='text-align: center;background-color: green;color: white;padding: 2%;'>Livre trouvé</p>";
+var_dump($anneeLivres[0]['annee']);
+    foreach($anneeLivres as $liste){
+        if($_POST['annee'] != $liste['annee']){
+            echo $message_erreur;
+            // header('Location: anneeLivres.php');   
+        }else{
+            echo $message_valider;
+        }
+    }
+    $template = 'anneeLivres';
+    include 'layout.phtml';
