@@ -8,7 +8,13 @@ $query = $pdo->prepare('
     FROM membres
     WHERE email = ?
 ');
-$query->execute(array($_POST['mail']));
+
+if(isset($_POST['mail'])){
+    $mail = $_POST['mail'];
+    $query->execute(array($mail));/* récuperation via le formulaire du mail rentrer */ 
+    // var_dump($annee);
+}
+
 $informationM = $query->fetch();
 //var_dump($informationM);
     if(isset($_POST['mail']) && $_POST['mdp'] == $informationM['mot_de_passe']){
