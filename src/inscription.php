@@ -4,9 +4,9 @@ include 'application/connexion_bdd.php';
 
 // requête pour inserer des nouveaux utilisateurs
 if(empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['mail']) || empty($_POST['mdp'])){
-    echo '<p style="display: block;
-        background-color: green;
-        padding: 3%"><b>Veuillez remplir tout le formulaire !!</b></p>';
+    // echo '<p style="display: block;
+    //     background-color: green;
+    //     padding: 3%"><b>Veuillez remplir tout le formulaire !!</b></p>';
 }else{
     // variables du formulaire
     $nom = $_POST['nom'];
