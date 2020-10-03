@@ -13,8 +13,10 @@ $query=$pdo->prepare('
 ');
 if(isset($_POST['annee'])){
     $annee = $_POST['annee'];
+    $query->execute(array($annee));/* récuperation via le formulaire de l'annee rentrer */ 
+    // var_dump($annee);
 }
-$query->execute(array($annee));/* récuperation via le formulaire de l'annee rentrer */ 
+
 $anneeLivres = $query->fetchAll();
 $message_erreur = "<p style='text-align: center;background-color: red;color: white;padding: 2%;'>Désolé aucun livre de la bibliothèque n'a été publié cette année là</p>";
 $message_valider = "<p style='text-align: center;background-color: green;color: white;padding: 2%;'>Livre trouvé</p>";
