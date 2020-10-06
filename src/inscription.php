@@ -22,8 +22,8 @@ if(empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['mail']) || e
         <title>Vous vous êtes inscrit sur notre site ...</title>
     </head>
     <body>
-        <p>Bonjour Mr/Mmme '. $nom .' '. $prenom .'</p>
-        <p> Je vous envoi un mail de confirmation conçernant votre incription sur notre site \'bibliotèhque\'</p>
+        <p>Bonjour Mr/Mme '. $nom .' '. $prenom .'</p>
+        <p> Je vous envoi un mail de confirmation conçernant votre incription sur notre site \'bibliothèque\'</p>
     </body>
     </html>';
     $headers = 'From: yano.c@hotmail.com' . "\n" .
@@ -31,7 +31,7 @@ if(empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['mail']) || e
     'X-Mailer: PHP/' . phpversion();
     //fonction mail qui permet l'envoi du mail et son contenu
     mail($to, $subject, $message, $headers);
-    var_dump($mail);
+    // var_dump($mail);
 
 
     $query = $pdo->prepare('
